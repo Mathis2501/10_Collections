@@ -3,16 +3,16 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections;
 using System.Collections.Generic;
 
-//namespace _10_Collections
-//{
+namespace _10_Collections
+{
     //THESE ARE THE SECOND TESTS YOU SHOULD DO
 
     //When we don't have a database, we can use an in-memory repository instead to load and save data.
-    //The repository will later serve as a medium between our program and the database. This is called the repository pattern.
+    //The repository will later serve as a medium between our program and the database.This is called the repository pattern.
     //The tests automatically force you to create an interface which can be used in the next assignment
 
 
-    /*[TestClass]
+    [TestClass]
     public class MemoryStockRepositoryTests
     {
 
@@ -88,7 +88,7 @@ using System.Collections.Generic;
             Assert.AreEqual(0, stocks.Count);
         }
 
-        
+
     }
 }
-*/
+

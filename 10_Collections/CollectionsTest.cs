@@ -72,41 +72,41 @@ namespace _10_Collections
         //* (most valuable comes first)
         //*/
 
-        //[TestMethod]
-        //public void CanCompareByValue()
-        //{
-        //    StockValueComparator comparator = new StockValueComparator();
-        //    Assert.IsTrue(comparator.Compare(stockIBM, stockHP) > 0);  // less is more
-        //    Assert.AreEqual(0, comparator.Compare(stockIBM, stockIBM));
-        //    Assert.IsTrue(comparator.Compare(stockYHOO, stockHP) < 0);
-        //}
+        [TestMethod]
+        public void CanCompareByValue()
+        {
+            StockValueComparator comparator = new StockValueComparator();
+            Assert.IsTrue(comparator.Compare(stockIBM, stockHP) > 0);  // less is more
+            Assert.AreEqual(0, comparator.Compare(stockIBM, stockIBM));
+            Assert.IsTrue(comparator.Compare(stockYHOO, stockHP) < 0);
+        }
 
-        //[TestMethod]
-        //public void CanSortByValue()
-        //{
-        //    Portfolio portfolio = new Portfolio();
-        //    portfolio.AddAsset(stockIBM);
-        //    portfolio.AddAsset(stockHP);
-        //    portfolio.AddAsset(stockYHOO);
+        [TestMethod]
+        public void CanSortByValue()
+        {
+            Portfolio portfolio = new Portfolio();
+            portfolio.AddAsset(stockIBM);
+            portfolio.AddAsset(stockHP);
+            portfolio.AddAsset(stockYHOO);
 
-        //    IList<Asset> stocks = portfolio.GetAssetsSortedByValue();
-        //    Assert.AreEqual(stockYHOO, stocks[0]);
-        //    Assert.AreEqual(stockHP, stocks[1]);
-        //    Assert.AreEqual(stockIBM, stocks[2]);
+            IList<Asset> stocks = portfolio.GetAssetsSortedByValue();
+            Assert.AreEqual(stockYHOO, stocks[0]);
+            Assert.AreEqual(stockHP, stocks[1]);
+            Assert.AreEqual(stockIBM, stocks[2]);
 
-        //}
+        }
 
-        //[TestMethod]
-        //[ExpectedException(typeof(NotSupportedException), "Unable to add an asset to the returned collection. Collection is ReadOnly")]
-        //public void CannotAddAssetToFacade()
-        //{
-        //    Portfolio portfolio = new Portfolio();
-        //    portfolio.AddAsset(stockIBM);
-        //    portfolio.AddAsset(stockHP);
+        [TestMethod]
+        [ExpectedException(typeof(NotSupportedException), "Unable to add an asset to the returned collection. Collection is ReadOnly")]
+        public void CannotAddAssetToFacade()
+        {
+            Portfolio portfolio = new Portfolio();
+            portfolio.AddAsset(stockIBM);
+            portfolio.AddAsset(stockHP);
 
-        //    IList<Asset> assets = portfolio.GetAssets();
-        //    assets.Add(stockYHOO);
-        //}
+            IList<Asset> assets = portfolio.GetAssets();
+            assets.Add(stockYHOO);
+        }
 
     }
 }

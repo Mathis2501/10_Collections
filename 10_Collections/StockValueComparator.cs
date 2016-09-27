@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace _10_Collections
 {
-    public interface Asset
+    class StockValueComparator
     {
-        double GetValue();
-
-        string GetName();
+        public int Compare(Asset A, Asset B)
+        {
+            return B.GetValue().CompareTo(A.GetValue());
+        }
     }
 }
