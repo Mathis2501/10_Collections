@@ -54,11 +54,13 @@
   <ItemGroup>
     <Compile Include="Asset.cs" />
     <Compile Include="CollectionsTest.cs" />
+    <Compile Include="IComparer.cs" />
     <Compile Include="MemoryStockRepositoryTests.cs" />
     <Compile Include="Portfolio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SavingsAccount.cs" />
     <Compile Include="Stock.cs" />
+    <Compile Include="StockNameComparator.cs" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

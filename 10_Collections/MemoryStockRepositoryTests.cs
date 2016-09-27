@@ -3,8 +3,8 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace _10_Collections
-{
+//namespace _10_Collections
+//{
     //THESE ARE THE SECOND TESTS YOU SHOULD DO
 
     //When we don't have a database, we can use an in-memory repository instead to load and save data.
@@ -12,7 +12,7 @@ namespace _10_Collections
     //The tests automatically force you to create an interface which can be used in the next assignment
 
 
-    [TestClass]
+    /*[TestClass]
     public class MemoryStockRepositoryTests
     {
 
@@ -91,3 +91,4 @@ namespace _10_Collections
         
     }
 }
+*/

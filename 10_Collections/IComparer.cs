@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace _10_Collections
 {
-    interface Asset
+    interface IComparer
     {
-        double GetValue();
-
-        string GetName();
     }
 }

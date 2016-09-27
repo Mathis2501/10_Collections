@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _10_Collectionss
+
+namespace _10_Collections
 {
     class SavingsAccount : Asset
     {
@@ -32,6 +33,11 @@ namespace _10_Collectionss
         public void ApplyInterest()
         {
             Value *= (InterestRate / 100) + 1;
+        }
+
+        public string GetName()
+        {
+            return AccountName;
         }
 
     }

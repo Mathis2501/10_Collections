@@ -34,5 +34,29 @@ namespace _10_Collections
             Stocks.Add(OrigAsset);
         }
 
+        public List<Asset> GetAssets()
+        {
+            return Stocks;
+        }
+
+        public Asset GetAssetByName(string Name)
+        {
+            foreach (Asset item in Stocks)
+            {
+                if (item.GetName() == Name)
+                {
+                    return item;
+                }                    
+            }
+            return null;
+        }
+
+        public IList<Asset> GetAssetsSortedByName()
+        {
+            var sortedList = Stocks.OrderBy(x => x).ToList();
+            
+            return sortedList;
+        }
+
     }
 }

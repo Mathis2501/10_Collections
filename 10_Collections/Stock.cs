@@ -63,6 +63,11 @@ namespace _10_Collections
                 return false;
         }
 
+        public string GetName()
+        {
+            return Symbol;
+        }
+
 
 
     }
